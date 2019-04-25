@@ -12,7 +12,4 @@ export class DashboardComponent {
   constructor(
     private router: Router) { }
 
-  private onToggleSettings(): void {
-    this.router.navigate(['/dashboard/settings']);
-  }
 }
