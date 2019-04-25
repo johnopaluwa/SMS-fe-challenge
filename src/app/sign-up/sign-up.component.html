@@ -1,0 +1,57 @@
+<div class="row form-wrapper">
+		<div class="col-xs-12 col-sm-6 offset-sm-3 example-col">
+			<div class="card">
+				<div class="card-block">
+					<form class="k-form" [formGroup]="signUpForm" (ngSubmit)="login()">
+						<fieldset>
+							
+							<legend>SignUp Details</legend>
+
+							<div class="form-group">
+								<label class="k-form-field">
+									<span>Email</span>
+								</label>
+								<input type="email" class="k-textbox form-control" placeholder="Your email" 
+														formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }"                       
+														/>
+								<div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+									<div *ngIf="f.email.errors.required">Email is required</div>
+									<div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="k-form-field">
+									<span>Password</span>
+								</label>
+								<input type="password" class="k-textbox form-control" value="123456" placeholder="Your Password" 
+														formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }"    
+														/>
+								<div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+									<div *ngIf="f.password.errors.required">Password is required</div>
+									<div *ngIf="f.password.errors.minlength">Password must be at least 8 characters</div>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="k-form-field">
+									<span>Confirm password</span>
+								</label>
+								<input type="confirmPassword" class="k-textbox form-control" value="123456" placeholder="Confirm your Password" 
+															formControlName="confirmPassword" [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }"    
+															/>
+								<div *ngIf="submitted && f.confirmPassword.errors" class="invalid-feedback">
+									<div *ngIf="f.confirmPassword.errors.required">Confirm password is required</div>
+									<div *ngIf="f.confirmPassword.errors.mustMatch">Passwords must match</div>
+								</div>
+							</div>
+
+						</fieldset>
+						<div class="text-right form-group">
+							<button  class="k-button k-primary"  >Submit</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>

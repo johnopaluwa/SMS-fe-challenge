@@ -1,0 +1,13 @@
+.invalid-feedback {
+    color: red;
+    font-size: 12px;
+}
+
+.notification {
+    padding: 10px 5px;
+    color: #313536;
+}
+
+.form-wrapper {
+    margin-top: 10%;
+}
