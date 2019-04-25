@@ -15,10 +15,6 @@ import { AuthRequest } from '../models/authRequest';
 export class SignUpComponent implements OnInit {
 
     private signUpForm: FormGroup;
-    private UserEmail: string = ' ';
-    private UserPassword: string = ' ';
-    private readonly ErrorMessage = "Incorrect login details";
-    private showErrorMessage: boolean = false;
     private submitted = false;
 
     constructor(
